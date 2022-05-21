@@ -308,55 +308,9 @@
 </header>
 
     
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -393,159 +347,12 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#articles" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://github.com/largetomatoes/largetomatoes.github.io" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/largetomatoes/largetomatoes.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2432023353" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2432023353" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
 
 
 <main class="content">
 
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;碑石
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            我们一生都要正直坦白，不论别人怎样看待我们，怎样评价我们绝不动摇。而且不因为我们的热情，我们的追求，我们的过错而害羞，要勇往直前。——陀思妥耶夫斯基
-        </div>
-    </div>
-</div>
-
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
     
 
     
@@ -556,279 +363,20 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/05/21/%E8%A2%AB%E6%B6%88%E8%B4%B9%E7%9A%84%E5%8F%8D%E6%8A%97/">
+                    <a href="/2022/05/08/%E8%85%90%E8%B4%A5%E7%9A%84%E8%AF%97/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="被消费的反抗">
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="腐败的诗--抛入人间">
                             
-                            <span class="card-title">被消费的反抗</span>
+                            <span class="card-title">腐败的诗--抛入人间</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                连续更新这个就不做标签了
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                李弈博
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%80%9D%E8%80%83%E4%B8%8E%E4%BA%A4%E6%B5%81/">
-                            <span class="chip bg-color">思考与交流</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/14/%E6%BC%A01-1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="漠-皮套人">
-                            
-                            <span class="card-title">漠-皮套人</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                赞美伟大的真理，伟大的模型！
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                李弈博
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E3%80%8A%E6%BC%A0%E3%80%8B/">
-                            <span class="chip bg-color">《漠》</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/14/%E6%B2%991-2/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="沙1-2">
-                            
-                            <span class="card-title">沙1-2</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                活在沙的种族是注定无法思考的，这个沙上的种族，有如魔怔一般，逃入所谓历史的汪洋，品尝着自历史中留下的供人遐想的癔症.
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                李弈博
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E3%80%8A%E6%B2%99%E3%80%8B/">
-                            <span class="chip bg-color">《沙》</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/10/%E5%89%8D%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81%E9%A3%8E%E6%9A%B4/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="前意识形态风暴--体制与自我困顿中的冲撞">
-                            
-                            <span class="card-title">前意识形态风暴--体制与自我困顿中的冲撞</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                首先声明这个东西是我很郁闷呢困顿的时候写的，自己也意识到了自己的困顿，所以文章中戾气很重，说白了那些很狠毒的话和骂人的话其实是骂自己的，望悉知。
-前意识形态风暴《前意识形态风暴》——对现代学生的自救思想运动总  对了建议先看最后的那部分，咱
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                李弈博
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%80%9D%E8%80%83%E4%B8%8E%E4%BA%A4%E6%B5%81/">
-                            <span class="chip bg-color">思考与交流</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/08/%E6%B2%991-1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="沙/1-1">
-                            
-                            <span class="card-title">沙/1-1</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                自杀的失语，是这片土地从未进步的印证。
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                李弈博
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E3%80%8A%E6%B2%99%E3%80%8B/">
-                            <span class="chip bg-color">《沙》</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/08/%E6%B2%99/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="沙">
-                            
-                            <span class="card-title">沙</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                沙的话语
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                李弈博
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E3%80%8A%E6%B2%99%E3%80%8B/">
-                            <span class="chip bg-color">《沙》</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/08/%E8%A2%AB%E4%B8%A4%E6%89%87%E6%95%9E%E5%BC%80%E7%9A%84%E9%97%A8%E5%9B%B0%E4%BD%8F/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="被两扇敞开的门困住">
-                            
-                            <span class="card-title">被两扇敞开的门困住</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                也许不存在那个彼岸，只是我们走错了路，选择了错误的道路。
+                                贩卖失败的眼泪，是蹴尔而与之的前奏。
                             
                         </div>
                         <div class="publish-info">
@@ -858,20 +406,20 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/05/08/%E7%97%85%E4%BA%BA/">
+                    <a href="/2022/05/08/%E5%B1%B9%E7%AB%8B%E4%BA%8E%E5%A4%A7%E5%9C%B0%E4%B8%8A/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="病人">
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="屹立于大地上">
                             
-                            <span class="card-title">病人</span>
+                            <span class="card-title">屹立于大地上</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                病人无善，他们见不得一点阳光，只不过阳光会让他们感到自己的匮乏罢了。
+                                北国发达的只有关于利害的斤斤计较，和多重伪装的高级欺诈术，在北国人眼中没有什么比肮脏更为神圣的了，同时没有什么比妨碍他们接触肮脏更为痛恨的了。
                             
                         </div>
                         <div class="publish-info">
@@ -890,8 +438,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E3%80%8A%E5%AF%B9%E7%81%AB%E7%9A%84%E8%96%AA%E6%9F%B4%E3%80%8B/">
-                            <span class="chip bg-color">《对火的薪柴》</span>
+                        <a href="/tags/%E8%87%AA%E7%94%B1%E5%B0%8F%E8%AF%B4/">
+                            <span class="chip bg-color">自由小说</span>
                         </a>
                         
                     </div>
@@ -901,20 +449,20 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/05/08/%E7%81%AB%E8%B5%8B/">
+                    <a href="/2022/05/08/%E5%A4%B1%E8%90%BD%E7%9D%80%E7%9A%84+%E8%87%AA%E9%86%89%E8%80%85/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="火赋">
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="失落着的+自醉者">
                             
-                            <span class="card-title">火赋</span>
+                            <span class="card-title">失落着的+自醉者</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                《对火的薪柴》之序
+                                阿赫特恐惧的并非冯特信件的内容，而是信件的存在。
                             
                         </div>
                         <div class="publish-info">
@@ -933,8 +481,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E3%80%8A%E5%AF%B9%E7%81%AB%E7%9A%84%E8%96%AA%E6%9F%B4%E3%80%8B/">
-                            <span class="chip bg-color">《对火的薪柴》</span>
+                        <a href="/tags/%E5%A4%B1%E8%90%BD%E4%B9%8B%E5%B7%9E/">
+                            <span class="chip bg-color">失落之州</span>
                         </a>
                         
                     </div>
@@ -944,20 +492,20 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/05/08/%E6%AD%BB%E4%B8%8E%E6%B4%BB/">
+                    <a href="/2022/05/08/%E5%A4%B1%E8%90%BD%E4%B9%8B%E5%B7%9E/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="死与活">
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="失落之州">
                             
-                            <span class="card-title">死与活</span>
+                            <span class="card-title">失落之州</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                《对火的薪柴》第一章
+                                当嘴不再沉默，那么代表他的思想沉默了。
                             
                         </div>
                         <div class="publish-info">
@@ -976,8 +524,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E3%80%8A%E5%AF%B9%E7%81%AB%E7%9A%84%E8%96%AA%E6%9F%B4%E3%80%8B/">
-                            <span class="chip bg-color">《对火的薪柴》</span>
+                        <a href="/tags/%E5%A4%B1%E8%90%BD%E4%B9%8B%E5%B7%9E/">
+                            <span class="chip bg-color">失落之州</span>
                         </a>
                         
                     </div>
@@ -987,20 +535,20 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/05/08/%E8%85%90%E8%B4%A5%E7%9A%84%E8%AF%97--%E6%A2%A6/">
+                    <a href="/2022/05/08/%E9%85%92%E7%B2%BE--%E8%A7%82%E5%BF%B5/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="腐败的诗--梦">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="酒精--观念">
                             
-                            <span class="card-title">腐败的诗--梦</span>
+                            <span class="card-title">酒精--观念</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                第一次接触梦，希望梦是我永久的议题，毕竟睡一觉有一个梦。
+                                供不应求之时，连死亡都涨价了
                             
                         </div>
                         <div class="publish-info">
@@ -1019,8 +567,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E8%AF%97%E6%AD%8C%E5%B0%9D%E8%AF%95/">
-                            <span class="chip bg-color">诗歌尝试</span>
+                        <a href="/tags/%E8%87%AA%E7%94%B1%E5%B0%8F%E8%AF%B4/">
+                            <span class="chip bg-color">自由小说</span>
                         </a>
                         
                     </div>
@@ -1030,25 +578,25 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/05/08/%E8%A3%B8%E5%A5%94/">
+                    <a href="/2022/05/07/%E8%87%AA%E6%9D%80%E8%80%85%E6%9C%80%E5%90%8E%E7%9A%84%E5%91%90%E5%96%8A/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="裸奔">
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="自杀者最后的呐喊">
                             
-                            <span class="card-title">裸奔</span>
+                            <span class="card-title">自杀者最后的呐喊</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                裸奔者通过裸奔强行塑造一个他要被凝视的空间，从而享受他要被凝视的过程，成功通过不得不消弭了凝视的威力。
+                                第一个文章。
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-07
                             </span>
                             <span class="publish-author">
                                 
@@ -1062,8 +610,8 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%80%9D%E8%80%83%E4%B8%8E%E4%BA%A4%E6%B5%81/">
-                            <span class="chip bg-color">思考与交流</span>
+                        <a href="/tags/%E8%87%AA%E7%94%B1%E5%B0%8F%E8%AF%B4/">
+                            <span class="chip bg-color">自由小说</span>
                         </a>
                         
                     </div>
@@ -1081,18 +629,18 @@
     <div class="row">
         <div class="col s6 m4 l4">
             
-            <a class="left btn-floating btn-large disabled">
+            <a href="/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fas fa-angle-left"></i>
             </a>
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 2</div>
+            <div class="center-align b-text-gray">2 / 2</div>
         </div>
         <div class="col s6 m4 l4">
             
-            <a href="/page/2/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
+            <a class="right btn-floating btn-large disabled">
                 <i class="fas fa-angle-right"></i>
             </a>
             
